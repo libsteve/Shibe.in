@@ -3,84 +3,16 @@
 <head>
 <link>
 <title>Let There Be Shibes</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
-<script>
-// add in the bounce animation
-(function () {
-    var bounceFunction;
-
-    bounceFunction = function (element) {
-        element.animate({"margin-top":"-50px", 
-                        "margin-bottom":"50px"}, 
-                        300, 
-                        function () {
-            element.animate({"margin-top":"0px", 
-                             "margin-bottom":"0px"}, 
-                             300, 
-                             bounceFunction(element));
-        });
-    };
-
-    for (var i=0; i < 15; i += 1) {
-        $(document).ready(function () {
-            $("#doges").append("<img class=\"doge\" src=\"https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg\" />");
-            bounceFunction($(".doge"));
-        });
-    }
-}());
-// add in the audio behavior
-(function () {
-    var barkSoundURL,
-        barkSoundAudio,
-        dogMusicURL,
-        dogMusicAudio;
-
-    barkSoundURL = "http://soundjax.com/reddo/52896^Sound-Effect---Dog-Bark-03.mp3";
-    barkSoundAudio = new Audio(barkSoundURL);
-    barkSoundAudio.load();
-
-    dogMusicURL = "http://50.7.60.82:777/ost/silent-hill-2-complete/dhljwlfpti/205-dog-ending-music.mp3";
-    dogMusicAudio = new Audio(dogMusicURL);
-    dogMusicAudio.load();
-    dogMusicAudio.loop = true;
-
-    $(document).ready(function () {
-        dogMusicAudio.play();
-        $("#start").click(function () {
-            barkSoundAudio.currentTime=0;
-            barkSoundAudio.play();
-        });
-    });
-}());
-</script>
-<style>
-
-body {
-    background-image: url(http://rack.3.mshcdn.com/media/ZgkyMDEyLzExLzIzLzAyXzEwXzQ0XzY2X2ZpbGUKcAl0aHVtYgk4NTB4NTkwPgplCWpwZw/b26b66e5.jpg);
-    background-size: cover;
-}
-
-.doge {
-    width: 50pt;
-    height: 50pt;
-    background-color: red;
-}
-
-#doges {
-    height: 100pt;
-    padding-top: 50pt;
-    padding-bottom: 0;
-    margin-bottom: 2pt;
-}
-
-</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" language="javascript"></script>
+<script src="shibe.in.js" language="javascript"></script>
+<link rel="stylesheet" type="text/css" href="flipping-animation.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
-<div id="doges">
-</div>
+<div id="doges"></div>
 <button id="start">What does the shibe say?</button>
 
 </body>
 </html>
+

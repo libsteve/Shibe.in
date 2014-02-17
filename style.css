@@ -1,0 +1,25 @@
+/*
+ * The style sheet for Shibe.in
+ */
+
+body {
+    background-image: url(http://rack.3.mshcdn.com/media/ZgkyMDEyLzExLzIzLzAyXzEwXzQ0XzY2X2ZpbGUKcAl0aHVtYgk4NTB4NTkwPgplCWpwZw/b26b66e5.jpg);
+    background-size: cover;
+}
+
+.doge {
+    width: 50pt;
+    height: 50pt;
+    -webkit-animation: flipping 5s infinite linear;
+	-moz-animation: flipping 5s infinite linear;
+    -ms-animation: flipping 5s infinite linear;
+    animation: flipping 5s infinite linear;
+}
+
+#doges {
+    height: 100pt;
+    padding-top: 50pt;
+    padding-bottom: 0;
+    margin-bottom: 2pt;
+}
+
